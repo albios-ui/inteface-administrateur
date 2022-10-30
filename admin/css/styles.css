@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i,600,700,800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 9px 1%;
+    background-color: black;
+}
+.logo {
+  margin-right: auto;
+  margin-top: -4px;
+  
+  color: #f2f2f2;
+  font-size: 42px;
+  line-height: 34px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;  
+    margin-right: 7em;
+
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.6s ease 0s;
+  padding-left: 9px;
+  padding-right: 9px;
+  
+}
+
+.nav__links li a:hover  {
+  color: black;
+  transition: all 0.9s ease 0s;
+  padding: 9px 9px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+
+}
+
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: black;
+}
+
+.cta:hover {
+  color:rgb(87, 9, 0) ;
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 30px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: rgb(87,0,9);
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.overlay .close {
+  position: absolute;
+  top: -24px;
+  right: 4px;
+  font-size: 67px;
+  color: #edf0f1;
+  cursor: pointer;
+
+}
+
+@media screen and (max-height: 460px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  h1.smart {
+  font-size: 18px;
+  top: 15px;
+  right: 35px;
+}
+}
+
+
+@media only screen and (max-width: 1250px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  h1.smart {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
